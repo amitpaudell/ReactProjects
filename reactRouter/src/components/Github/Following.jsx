@@ -12,9 +12,18 @@ const Following = () => {
   }, []);
   return (
     <>
-      {following.map((fol) => {
-        return <p className="bg-gray-500 text-white text-center text-3xl p-4 ">Following :{fol.login}</p>;
-      })}
+      <div className="">
+        Following:
+        <ul className="list-inside list-disc">
+          {following.map((fol) => {
+            return (
+              <li key={fol.login} className="">
+                {fol.login}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };
