@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-const Following = () => {
+const Following = ({ user }) => {
   const [following, setFollowing] = useState([]);
+
   useEffect(() => {
     async function getFollowing() {
-      const res = await fetch("https://api.github.com/users/amitpaudell/following");
+      const res = await fetch(`https://api.github.com/users/${user}/following`);
       const data = await res.json();
       setFollowing(data);
     }
