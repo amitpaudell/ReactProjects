@@ -15,6 +15,7 @@ const GitHub = () => {
   return (
     <div className="bg-gray-500 text-white text-center text-3xl p-4 ">
       <label htmlFor="">Enter your github username</label>
+      <button>Submit</button>
       <input type="text" name="" id="" value={user} onChange={(e) => setUser(e.target.value)} />
 
       <p>Username: {data.login}</p>
