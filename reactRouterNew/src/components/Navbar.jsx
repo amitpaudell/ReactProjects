@@ -1,13 +1,19 @@
-import Home from "./Home";
-import About from "./About";
-import Dashboard from "./Dashboard";
 import { NavLink } from "react-router";
 const Navbar = () => {
   return (
     <>
       <div>
-            <N
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")}>
+          Home
+        </NavLink>
 
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active-link" : "")}>
+          About
+        </NavLink>
+
+        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active-link" : "")}>
+          Dashboard
+        </NavLink>
       </div>
     </>
   );
