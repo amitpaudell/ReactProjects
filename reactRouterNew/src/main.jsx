@@ -7,6 +7,9 @@ import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Navbar from "./components/Navbar.jsx";
+import ParamComp from "./components/PaaramComp.jsx";
+import Courses from "./components/Courses.jsx";
+import MockTest from "./components/MockTest.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,27 @@ const router = createBrowserRouter([
       <div>
         <Navbar></Navbar>
         <Dashboard />
+      </div>
+    ),
+    children: [
+      {
+        path: "courses",
+        element: <Courses></Courses>,
+      },
+
+      {
+        path: "mockTest",
+        element: <MockTest></MockTest>,
+      },
+    ],
+  },
+
+  {
+    path: "/student/:id",
+    element: (
+      <div>
+        <Navbar></Navbar>
+        <ParamComp />
       </div>
     ),
   },
