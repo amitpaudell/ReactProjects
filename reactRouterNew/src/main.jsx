@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar.jsx";
 import ParamComp from "./components/PaaramComp.jsx";
 import Courses from "./components/Courses.jsx";
 import MockTest from "./components/MockTest.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         <ParamComp />
       </div>
     ),
+  },
+  {
+    path: "*",
+    element: <NotFound></NotFound>,
   },
 ]);
 
