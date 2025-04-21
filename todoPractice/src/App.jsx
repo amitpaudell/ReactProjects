@@ -1,12 +1,13 @@
-import { useState } from "react";
-
-import "./App.css";
+import TodoForm from "./components/TodoForm";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
-    <>
-      <h1 className="text-5xl ">Hello</h1>
-    </>
+    <div className="">
+      <h1 className="text-5xl text-amber-100 text-center font-bold">Todo App</h1>
+      <TodoForm></TodoForm>
+      <TodoItem></TodoItem>
+    </div>
   );
 }
 
